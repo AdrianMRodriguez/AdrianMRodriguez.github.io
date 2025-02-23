@@ -34,6 +34,11 @@ header {
     margin: 15px auto;
     object-fit: cover;
     border: 3px solid #58a6ff;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05);
 }
 
 nav ul {

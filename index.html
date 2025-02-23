@@ -9,20 +9,21 @@
 <body>
     <header>
         <div class="container">
-            <img src="https://www.linkedin.com/in/adrian-m-rodriguez/" alt="Adrian Rodriguez" class="profile-pic">
+            <img src="https://media.licdn.com/dms/image/v2/D4E03AQHcYE2qmDlK8Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690678700888?e=1746057600&v=beta&t=h-WRN_DfTh0BDCAqjzuPGHHuFutUc9I_7DXQhgNVa3Q" 
+                 alt="Adrian Rodriguez" class="profile-pic">
             <h1>Adrian Rodriguez</h1>
             <p>Mechanical Engineering Student</p>
             <p>Stony Brook University | Simons STEM Scholar</p>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#research">Research</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#notes">Class Notes</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
         </div>
+        <nav class="sticky-nav">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#notes">Class Notes</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section id="about" class="section">
@@ -53,12 +54,10 @@
             <div class="project-card">
                 <h3>Robotic Arm</h3>
                 <p>Designed a 3D printed robotic arm with sensor-based controls and developing an iOS/Android app for control.</p>
-                <img src="robotic_arm.jpg" alt="Robotic Arm Project" class="project-image">
             </div>
             <div class="project-card">
                 <h3>3D Printed Model Rocket</h3>
                 <p>Secured funding to build a model rocket with PID stabilization using quaternion coordinates.</p>
-                <img src="model_rocket.jpg" alt="3D Printed Model Rocket" class="project-image">
             </div>
         </div>
     </section>
@@ -66,37 +65,28 @@
     <section id="notes" class="section">
         <div class="container">
             <h2>Class Notes</h2>
-            <p>Organized by semester and subject. Click below to manage your notes.</p>
-            <div class="notes-card">
-                <h3>Spring 2025</h3>
-                <button onclick="addClass()">Add Class</button>
-                <ul id="class-list"></ul>
-            </div>
+            <input type="text" id="class-input" placeholder="Enter class name">
+            <button onclick="addClass()">Add Class</button>
+            <ul id="class-list"></ul>
         </div>
     </section>
 
     <section id="contact" class="section">
         <div class="container">
             <h2>Contact</h2>
-            <p>Email: <a href="mailto:adrianmrod22@gmail.com">adrianmrod22@gmail.com</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/adrian-m-rodriguez/" target="_blank">linkedin.com/in/adrian-m-rodriguez</a></p>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send</button>
+            </form>
         </div>
     </section>
 
     <footer>
         <p>&copy; 2025 Adrian Rodriguez. All rights reserved.</p>
-        <p>GitHub: <a href="https://github.com/adrianmrod22" target="_blank">github.com/adrianmrod22</a></p>
     </footer>
 
-    <script>
-        function addClass() {
-            let className = prompt("Enter class name:");
-            if (className) {
-                let li = document.createElement("li");
-                li.textContent = className;
-                document.getElementById("class-list").appendChild(li);
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
