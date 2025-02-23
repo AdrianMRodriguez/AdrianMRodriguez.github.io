@@ -1,0 +1,127 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, #0a0f1e, #121212);
+    color: #ddd;
+}
+
+header {
+    background: linear-gradient(90deg, #001f3f, #003366);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 3px 3px 15px rgba(0, 191, 255, 0.8);
+    letter-spacing: 2px;
+    border-bottom: 4px solid #00bcd4;
+}
+
+.profile-picture {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid rgba(0, 191, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 191, 255, 0.6);
+    display: block;
+    margin: 20px auto;
+    transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.profile-picture:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 35px rgba(0, 191, 255, 1);
+    border: 5px solid #ff4081;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.hover-button {
+    background: linear-gradient(90deg, #005f73, #0a9396);
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.hover-button:hover {
+    background: linear-gradient(90deg, #94d2bd, #0a9396);
+    box-shadow: 0px 0px 15px rgba(0, 191, 255, 0.9);
+    transform: scale(1.1);
+}
+
+.course-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 20px;
+}
+
+.course-column {
+    width: 45%;
+    text-align: center;
+    background: #1b2a49;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.course-column:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(0, 191, 255, 0.8);
+}
+
+.course-card {
+    background: linear-gradient(90deg, #005f73, #0a9396);
+    padding: 18px;
+    margin: 12px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 18px rgba(0, 191, 255, 0.7);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 35px rgba(0, 191, 255, 0.9);
+    background: linear-gradient(90deg, #94d2bd, #0a9396);
+}
+
+footer {
+    background: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 25px;
+    text-shadow: 0px 0px 15px rgba(0, 191, 255, 0.6);
+    border-top: 5px solid #00bcd4;
+}
+
+a {
+    color: #00bcd4;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff4081;
+    text-shadow: 0px 0px 18px #ff4081;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adrian Rodriguez | Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Adrian Rodriguez</h1>
+            <p>Mechanical Engineering Student | Researcher | Innovator</p>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#notes">Class Notes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a passionate Mechanical Engineering student at Stony Brook University, focusing on aerospace, fluid mechanics, and advanced research in engineering technologies.</p>
+        </div>
+    </section>
+
+    <section id="research" class="section">
+        <div class="container">
+            <h2>Research Experience</h2>
+            <div class="research-card">
+                <h3>Dr. Spencer Zimmerman's Lab</h3>
+                <p>Developing microcontroller software in C++ to collect differential pressure data for air tunnel measurements.</p>
+            </div>
+            <div class="research-card">
+                <h3>NYU Urban Modeling Lab</h3>
+                <p>Designed intermeshed steel connections using Rhino3D to facilitate cost-efficient bolted beam connections.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="project-card">
+                <h3>Robotic Arm</h3>
+                <p>Designed a 3D printed robotic arm with sensor-based controls and developing an iOS/Android app for control.</p>
+            </div>
+            <div class="project-card">
+                <h3>3D Printed Model Rocket</h3>
+                <p>Secured funding to build a model rocket with PID stabilization using quaternion coordinates.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="notes" class="section">
+        <div class="container">
+            <h2>Class Notes</h2>
+            <p>Organized by semester and subject. Click below to manage your notes.</p>
+            <div class="notes-card">
+                <h3>Spring 2025</h3>
+                <button onclick="addClass()">Add Class</button>
+                <ul id="class-list"></ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:adrianmrod22@gmail.com">adrianmrod22@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/adrian-m-rodriguez/" target="_blank">linkedin.com/in/adrian-m-rodriguez</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Adrian Rodriguez. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function addClass() {
+            let className = prompt("Enter class name:");
+            if (className) {
+                let li = document.createElement("li");
+                li.textContent = className;
+                document.getElementById("class-list").appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>
