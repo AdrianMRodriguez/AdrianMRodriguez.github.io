@@ -1,92 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adrian Rodriguez | Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adrian's Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <img src="https://media.licdn.com/dms/image/v2/D4E03AQHcYE2qmDlK8Q/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1690678700888?e=1746057600&v=beta&t=h-WRN_DfTh0BDCAqjzuPGHHuFutUc9I_7DXQhgNVa3Q" 
-                 alt="Adrian Rodriguez" class="profile-pic">
-            <h1>Adrian Rodriguez</h1>
-            <p>Mechanical Engineering Student</p>
-            <p>Stony Brook University | Simons STEM Scholar</p>
-        </div>
-        <nav class="sticky-nav">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#notes">Class Notes</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="dashboard">
+    <h1>Welcome, Adrian</h1>
 
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a passionate Mechanical Engineering student at Stony Brook University, focusing on aerospace, fluid mechanics, and advanced research in engineering technologies.</p>
-            <img scr="images/flying.jpeg" alt="Adrian Flying" class="flying-image">
-        </div>
-    </section>
+    <div class="widget" id="clock">
+      <h2>Current Time</h2>
+      <div id="time">--:--:--</div>
+    </div>
 
-    <section id="research" class="section">
-        <div class="container">
-            <h2>Research Experience</h2>
-            <div class="research-card">
-                <h3>Dr. Spencer Zimmerman's Lab</h3>
-                <p>Developing microcontroller software in C++ to collect differential pressure data for air tunnel measurements.</p>
-            </div>
-            <div class="research-card">
-                <h3>NYU Urban Modeling Lab</h3>
-                <p>Designed intermeshed steel connections using Rhino3D to facilitate cost-efficient bolted beam connections.</p>
-            </div>
-        </div>
-    </section>
+    <div class="widget" id="calendar">
+      <h2>Google Calendar</h2>
+      <iframe src="https://calendar.google.com/calendar/embed?src=your_email%40gmail.com&ctz=America%2FNew_York" style="border: 0" width="100%" height="300" frameborder="0" scrolling="no"></iframe>
+    </div>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-card">
-                <h3>Robotic Arm</h3>
-                <p>Designed a 3D printed robotic arm with sensor-based controls and developing an iOS/Android app for control.</p>
-            </div>
-            <div class="project-card">
-                <h3>3D Printed Model Rocket</h3>
-                <p>Secured funding to build a model rocket with PID stabilization using quaternion coordinates.</p>
-            </div>
-        </div>
-    </section>
+    <div class="widget" id="spotify">
+      <h2>Spotify</h2>
+      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/your_playlist_id" width="100%" height="152" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    </div>
 
-    <section id="notes" class="section">
-        <div class="container">
-            <h2>Class Notes</h2>
-            <input type="text" id="class-input" placeholder="Enter class name">
-            <button onclick="addClass()">Add Class</button>
-            <ul id="class-list"></ul>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <form id="contact-form">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <textarea id="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Adrian Rodriguez. All rights reserved.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <div class="widget" id="notes">
+      <h2>Notes</h2>
+      <textarea id="noteInput" placeholder="Write your notes here..."></textarea>
+      <button onclick="saveNote()">Save Note</button>
+      <div id="savedNotes"></div>
+    </div>
+  </div>
 </body>
 </html>
